@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>Bazylia</dt>
+        <dd>Roślina jednoroczna. Może mieć ponad metr wysokości, a jej zapach jest boski</dd>
+        <dt>Oregano</dt>
+        <dd>Roślina wieloletnia. Dość intensywnie się rozrasta.</dd>
+        <dt>Kolendra</dt>
+        <dd>Roślina jednoroczna. Lubi chłodną pogodę.</dd>
+    </dl>
+</body>
+</html>
