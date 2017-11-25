@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Selektory CSS</title>
+    <style type="text/css">
+        body { font-size: 200%;}
+        div { font-size: 80%}
+        p { font-size: 80%}
+        span.smaller { font-size: 80%; font-weight: bold;}
+        #smallest { font-size: 80%; font-weight: normal;}
+    </style>
 </head>
 <body>
+    <div>
+        Ten tekst znajduje się w elemencie div, ale nie w znaczniku akapitu.
+    </div>
+    <p>Natomiast ten tekst znajduje się  w znaczniku akapitu.</p>
+    <span class="smaller">To jest znacznik span z klasą smaller umieszczony wewnątrz elementu akapitu.</span>
+    <span class="smaller"><span id="smallest">Ten tekst znajduje się w span z id smallest i klasą smaller</span></span>
     
 </body>
 </html>
