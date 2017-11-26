@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona z wbudowanym css</title>
+    <style type="text/css">
+    .outer {
+        border: 4px solid black;
+    }
+    .inner {
+        border: 2px dotted gray;
+        margin: 0;
+        padding: 0;
+        /* padding to odległość 1 elementu od granicy,
+        margin to odległość 1 elementu od 2 */
+    }
+    </style>
+</head>
+<body>
+    <!-- jeśli skrypt ma zostać wykonany przed załadowaniem danych, to wstawiamy go w head, jeśli po to w body. Dla dużych stron skrypty podaje się w linkach -->
+    <div class="outer">
+        Zewnętrzny div.
+        <div class="inner">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Aliquid, non? Natus odio totam necessitatibus quasi. <br> Quidem, omnis. Enim, neque ullam? <br> Vitae quod quis harum quia nostrum doloremque eligendi repellendus animi.
+        </div>
+    </div>
+
+</body>
+</html>
