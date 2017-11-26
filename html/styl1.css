@@ -35,4 +35,9 @@ a.nav:hover, a.nav:active {
 a.nav:link, a.nav:visited {
     color: green;
 }
+a {
+    border-left-width: 3px;
+    border-left-style: dotted;
+    border-left-color: green;
+}
 </style>
