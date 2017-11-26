@@ -1,0 +1,13 @@
+table {
+    width: 50%;
+    background-color: #fff;
+}
+tr {
+    text-align: center;
+}
+td {
+    width: 33%;
+}
+td.black {
+    background-color: #000;
+}
