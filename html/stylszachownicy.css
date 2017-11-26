@@ -7,6 +7,7 @@ tr {
 }
 td {
     width: 33%;
+    height: 81px;
 }
 td.black {
     background-color: #000;
