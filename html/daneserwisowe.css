@@ -1,0 +1,24 @@
+table {
+    width: 500px;
+    height: 700px;
+}
+th {
+    background-color: #5C6267;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white; 
+}
+th:hover {
+    background-color: #434547;
+}
+th:onclick {
+    background-color: black;
+
+}
+td {
+    background-color: #5C6267;
+    color: white;
+}
+td:hover {
+    background-color: #434547;
+}
