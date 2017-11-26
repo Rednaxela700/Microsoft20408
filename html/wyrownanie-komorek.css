@@ -1,0 +1,29 @@
+table {
+    padding: 8px;
+    width: 100%;
+}
+tr, th {
+    border: 1px solid black;
+}
+td {
+    height: 100px;
+    border: 1px solid black;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.top {
+    vertical-align: top;
+}
+.middle {
+    vertical-align: middle;
+}
+.bottom {
+    vertical-align: bottom;
+}
