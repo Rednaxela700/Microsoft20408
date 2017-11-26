@@ -25,6 +25,14 @@ a:link {
 }
 a.nav {
     /* link with nav class - it's a pseudoclass */
-
+    font-weight: bold;
+    text-decoration: none;
+}
+a.nav:hover, a.nav:active {
+    background-color: yellow;
+    color: red;
+}
+a.nav:link, a.nav:visited {
+    color: green;
 }
 </style>
