@@ -17,7 +17,8 @@
     .bottom {
         clear: both;
     }
-    p:first-letter {
+    h1 + p:first-letter {
+        /* h1 + p stanowi o pierwszym p po h1 */
         font-size: 300%;
         float: left;
         font-family: sans-serif;
@@ -26,6 +27,7 @@
     }
 </style>
 <body>
+    <h1>Dziwny jest ten świat</h1>
     <p class="right">Pewna mądra sentencja jakiegoś ważnego człowieka</p>
     <p class="right">Druga mądra sentencja jakiegoś ważnego człowieka</p>
     <p>To jest normalny tekst, którego jest podobno dużo.</p>
