@@ -7,16 +7,25 @@ var submitButton = form.querySelector("button");
 // var confirmPasswordInput = ...;
 
 var checkPasswords = function () {
+    
     // TODO: Compare passwordInput value to confirmPasswordInput value
-
+value
+    var passwordsMatch =passwordInput.value === confirmPasswordInput.value;
     // TODO: If passwords don't match then display error message on confirmPasswordInput (using setCustomValidity)
-
+    if (passwordsMatch) {
+confirmPasswordInput.setCustomValidity("");
+    } else {
+        //Setting this error message will prevent the form from being submitted
+        confirmPasswordInput.setCustomValidity("Your password don't match. Please type the same password again.");
+    }
     // TODO: If passwords do match then clear the error message (setCustomValidity with empty string)
 };
 
 var addPasswordInputEventListeners = function () {
     // TODO: Listen for the "input" event on passwordInput and confirmPasswordInput.
     //       Call the checkPasswords function
+    passwordInput.addEventListener("input", checkPasswords, false);
+    confirmPasswordInput.addEventListener("input", checkPasswords, false);
 };
 
 var formSubmissionAttempted = function() {
