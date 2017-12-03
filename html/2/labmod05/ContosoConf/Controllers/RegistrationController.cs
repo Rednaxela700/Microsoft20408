@@ -15,7 +15,7 @@ namespace Conference.Controllers
 
             if (ModelState.IsValid)
             {
-                return Redirect("registered.htm");
+                return Redirect("/registered.htm");
             }
             else
             {
