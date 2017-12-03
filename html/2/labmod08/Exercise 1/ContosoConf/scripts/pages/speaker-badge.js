@@ -11,7 +11,10 @@
             // TODO: Add event listeners for element "dragover" and "drop" events.
             //       handle with this.handleDragOver.bind(this) and this.handleDrop.bind(this)
         },
-
+        element:addEventListener("dragover",
+        this.handleDragOver.bind(this), false),
+        element:addEventListener("drop",
+        this.handleDragOver.bind(this), false),
         handleDragOver: function (event) {
             event.stopPropagation();
             event.preventDefault();
@@ -24,45 +27,60 @@
 
             // TODO: Get the files from the event
             // var files = ... ;
-            
+            var files = event.dataTransfer.files;
             if (files.length == 0) return;
 
             // TODO: Read the first file in the array
             //       Check the file type is an image
             //       Use this.readFile to read the file, then display the image
             //       (Note that this.readFile returns a jQuery deferred, so chain this.displayImage using the "done" method.)
+            var file = files[0];
+            if (this.isImageType(file.type)) {
+                this.readFile(file).done(this.displayImage);
+            }
+                else {
+                    alert("Please drop an image");
+                }
+            }
         },
 
-        isImageType: function (type) {
+        isImageType, function (type) {
             var imageTypes = ["image/jpeg", "image/jpg", "image/png"];
             return imageTypes.indexOf(type) >= 0;
         },
 
-        readFile: function (file) {
+        readFile, function (file) {
             var reading = $.Deferred();
             var context = this;
             
             // TODO: Create a new FileReader
             // var reader = ... ;
+            var reader = new FileReader() ;
 
             // TODO: Assign a callback function for reader.onload
             
             // TODO: In the callback use reading.resolveWith(context, [fileDataUrl]); to return the file data URL.
-            
+            reader.onload = function (loadEvent) {
+                var fileDataUrl = loadEvent.target.result;
+                reading.resolveWith(context, [fileDataUrl]);
+            };
             // TODO: Start reading the file as a DataURL
-            
+            reader.readAsDataURL(file);
             return reading;
         },
 
-        displayImage: function (imageUrl) {
+        displayImage, function (imageUrl) {
             this.imageElement.src = imageUrl;
         }
-    });
+    ,);
+    }
+)
+    
 
     var badgeElement = document.querySelector(".badge");
     SpeakerBadgePage.create(badgeElement);
 
-} ());
+    
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
